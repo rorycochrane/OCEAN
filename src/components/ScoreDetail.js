@@ -17,7 +17,7 @@ const ScoreDetail = ({ answers, displayScore }) => {
       <p>
         Score: {answers.reduce((a,b) => a+b, 0)}
         <br />
-        E: {
+        Extraversion: {
           Math.round((answers[0]
           +flip(answers[1])
           +answers[2]
@@ -30,7 +30,7 @@ const ScoreDetail = ({ answers, displayScore }) => {
           +flip(answers[9]))/4*100)/10
         }%
         <br />
-        N: {
+        Neuroticism: {
           (answers[10]
           +flip(answers[11])
           +answers[12]
@@ -43,7 +43,7 @@ const ScoreDetail = ({ answers, displayScore }) => {
           +answers[19])/40*100
         }%
         <br />
-        A: {
+        Agreeableness: {
           (flip(answers[20])
           +answers[21]
           +flip(answers[22])
@@ -56,7 +56,7 @@ const ScoreDetail = ({ answers, displayScore }) => {
           +answers[29])/40*100
         }%
         <br />
-        C: {
+        Conscientiousness: {
           (answers[30]
           +flip(answers[31])
           +answers[32]
@@ -69,7 +69,7 @@ const ScoreDetail = ({ answers, displayScore }) => {
           +answers[39])/40*100
         }%
         <br />
-        O: {
+        Openness: {
           (answers[40]
           +flip(answers[41])
           +answers[42]
