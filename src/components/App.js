@@ -8,11 +8,12 @@ const App = () => {
   return (
     <div className="ui container grid">
       <div className="ui row">
-        <Segment style={{overflow: 'auto', maxHeight: 500 }}>
+        
           <div className="column ten wide">
+          <Segment style={{overflow: 'auto', maxHeight: 500 }}>
             <QuestionList />
+          </ Segment>
           </div>
-        </Segment>
         <div className="column eight wide">
           <ScoreDetail />
         </div>

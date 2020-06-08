@@ -44,16 +44,6 @@ class QuestionList extends Component {
                 </div>
               </div>
             </div>
-            {/* <button
-              className="ui button primary"
-              onClick={() => this.props.selectSong(song)}
-            >
-              Select
-            </button> */}
-            {/* <div className="ui radio checkbox">
-                <input type="radio" />
-                <label>Agree</label>
-            </div> */}
           </div>
           <div className="content">{question.text}</div>
         </div>
