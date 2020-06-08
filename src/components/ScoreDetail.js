@@ -15,8 +15,6 @@ const ScoreDetail = ({ answers, displayScore }) => {
     <div>
       <h3>Score:</h3>
       <p>
-        Score: {answers.reduce((a,b) => a+b, 0)}
-        <br />
         Extraversion: {
           Math.round((answers[0]
           +flip(answers[1])
