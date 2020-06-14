@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { displayScore, changeAnswer } from '../actions';
+import { changeAnswer } from '../actions';
 
 class QuestionList extends Component {
   renderList() {
@@ -58,14 +58,6 @@ class QuestionList extends Component {
             <div className="ui divided list">
                 {this.renderList()}
             </div>
-            <div>
-                <button
-                className="ui button primary"
-                onClick={() => this.props.displayScore(true)}
-                >
-                  Submit
-                </button>
-            </div>
         </div>
     )
   }
@@ -78,5 +70,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { displayScore, changeAnswer}
+  { changeAnswer }
 )(QuestionList);

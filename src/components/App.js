@@ -9,7 +9,7 @@ const App = () => {
     <div className="ui container grid">
       <div className="ui row">
         
-          <div className="column ten wide">
+          <div className="column sixteen wide">
           <Segment style={{overflow: 'auto', maxHeight: 500 }}>
             <QuestionList />
           </ Segment>
