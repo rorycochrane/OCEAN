@@ -37,7 +37,7 @@ class ScoreDetail extends Component {
           }%
           <br />
           Neuroticism: {
-            (this.props.answers[10]
+            Math.round((this.props.answers[10]
             +flip(this.props.answers[11])
             +this.props.answers[12]
             +flip(this.props.answers[13])
@@ -46,11 +46,11 @@ class ScoreDetail extends Component {
             +this.props.answers[16]
             +this.props.answers[17]
             +this.props.answers[18]
-            +this.props.answers[19])/40*100
+            +this.props.answers[19])/4*100)/10
           }%
           <br />
           Agreeableness: {
-            (flip(this.props.answers[20])
+            Math.round((flip(this.props.answers[20])
             +this.props.answers[21]
             +flip(this.props.answers[22])
             +this.props.answers[23]
@@ -59,11 +59,11 @@ class ScoreDetail extends Component {
             +flip(this.props.answers[26])
             +this.props.answers[27]
             +this.props.answers[28]
-            +this.props.answers[29])/40*100
+            +this.props.answers[29])/4*100)/10
           }%
           <br />
           Conscientiousness: {
-            (this.props.answers[30]
+            Math.round((this.props.answers[30]
             +flip(this.props.answers[31])
             +this.props.answers[32]
             +flip(this.props.answers[33])
@@ -72,11 +72,11 @@ class ScoreDetail extends Component {
             +this.props.answers[36]
             +flip(this.props.answers[37])
             +this.props.answers[38]
-            +this.props.answers[39])/40*100
+            +this.props.answers[39])/4*100)/10
           }%
           <br />
           Openness: {
-            (this.props.answers[40]
+            Math.round((this.props.answers[40]
             +flip(this.props.answers[41])
             +this.props.answers[42]
             +flip(this.props.answers[43])
@@ -85,7 +85,7 @@ class ScoreDetail extends Component {
             +this.props.answers[46]
             +this.props.answers[47]
             +this.props.answers[48]
-            +this.props.answers[49])/40*100
+            +this.props.answers[49])/4*100)/10
           }%
         </p>
       </div>
