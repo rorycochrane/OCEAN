@@ -24,10 +24,3 @@ export const displayScore = (displayScore) => {
         payload: displayScore
     };
 };
-
-// export const submitScore = score => {
-//     return {
-//         type: 'SUBMIT_SCORE',
-//         payload: score
-//     };
-// };
