@@ -106,11 +106,11 @@ class ScoreDetail extends Component {
     )
 
     const data = [
-            {x: 0, y: 5},
-            {x: 1, y: 5},
-            {x: 2, y: 4},
-            {x: 3, y: 9},
-            {x: 4, y: 1}
+            {x: 0, y: op},
+            {x: 1, y: con},
+            {x: 2, y: ex},
+            {x: 3, y: ag},
+            {x: 4, y: neu}
           ];
   
     return (
