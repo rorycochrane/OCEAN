@@ -1,6 +1,4 @@
-// Action creator
 export const selectSong = song => {
-    // Return an action
     console.log('select song action called');
     return {
       type: 'SONG_SELECTED',
