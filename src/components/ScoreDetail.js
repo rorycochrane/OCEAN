@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { displayScore } from '../actions';
+import {XYPlot, VerticalBarSeries} from 'react-vis';
 
 
 const flip = (num) => {
   return 4-num;
 }
+
+// class BarGraph extends Component {
+//   render() {
+//     const data = [
+//       {x: 0, y: 8},
+//       {x: 1, y: 5},
+//       {x: 2, y: 4},
+//       {x: 3, y: 9},
+//       {x: 4, y: 1}
+//     ];
+//     return (
+//       <div className="App">
+//         <XYPlot height={200} width={200}>
+//             <VerticalBarSeries data={data} />
+//         </XYPlot>
+//       </div>
+//     );
+//   }
+// }
 
 class ScoreDetail extends Component {
   render() {
@@ -19,6 +39,7 @@ class ScoreDetail extends Component {
               </button>
           </div>
         }
+
     const ex = (
       Math.round((this.props.answers[0]
       +flip(this.props.answers[1])
@@ -31,6 +52,7 @@ class ScoreDetail extends Component {
       +this.props.answers[8]
       +flip(this.props.answers[9]))/4*100)/10
     )
+
     const neu = (
       Math.round((this.props.answers[10]
       +flip(this.props.answers[11])
@@ -43,6 +65,7 @@ class ScoreDetail extends Component {
       +this.props.answers[18]
       +this.props.answers[19])/4*100)/10
     )
+
     const ag = (
       Math.round((flip(this.props.answers[20])
       +this.props.answers[21]
@@ -55,6 +78,7 @@ class ScoreDetail extends Component {
       +this.props.answers[28]
       +this.props.answers[29])/4*100)/10
     )
+
     const con = (
       Math.round((this.props.answers[30]
       +flip(this.props.answers[31])
@@ -67,6 +91,7 @@ class ScoreDetail extends Component {
       +this.props.answers[38]
       +this.props.answers[39])/4*100)/10
     )
+
     const op = (
       Math.round((this.props.answers[40]
       +flip(this.props.answers[41])
@@ -79,7 +104,17 @@ class ScoreDetail extends Component {
       +this.props.answers[48]
       +this.props.answers[49])/4*100)/10
     )
+
+    const data = [
+            {x: 0, y: 5},
+            {x: 1, y: 5},
+            {x: 2, y: 4},
+            {x: 3, y: 9},
+            {x: 4, y: 1}
+          ];
+  
     return (
+      <div>
       <div>
         <h3>Score:</h3>
         <p>
@@ -94,6 +129,10 @@ class ScoreDetail extends Component {
           }-{
             Math.round((neu-0.01)/10)
           }
+        </p>
+      </div>
+      <div className="ui container grid">
+        <div className="column eight wide">
           <br />
           Extraversion: {ex} %
           <br />
@@ -104,7 +143,15 @@ class ScoreDetail extends Component {
           Conscientiousness: {con} %
           <br />
           Openness: {op} %
-        </p>
+        </div>
+        <div className="column eight wide">
+        <div>
+          <XYPlot height={200} width={200}>
+            <VerticalBarSeries data={data} />
+          </XYPlot>
+        </div>
+        </div>
+      </div>
       </div>
     );
   };
