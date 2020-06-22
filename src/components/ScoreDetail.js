@@ -8,25 +8,6 @@ const flip = (num) => {
   return 4-num;
 }
 
-// class BarGraph extends Component {
-//   render() {
-//     const data = [
-//       {x: 0, y: 8},
-//       {x: 1, y: 5},
-//       {x: 2, y: 4},
-//       {x: 3, y: 9},
-//       {x: 4, y: 1}
-//     ];
-//     return (
-//       <div className="App">
-//         <XYPlot height={200} width={200}>
-//             <VerticalBarSeries data={data} />
-//         </XYPlot>
-//       </div>
-//     );
-//   }
-// }
-
 class ScoreDetail extends Component {
   render() {
     if (!this.props.display) {
