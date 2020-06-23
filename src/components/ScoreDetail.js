@@ -93,6 +93,14 @@ class ScoreDetail extends Component {
             {x: 3, y: ag},
             {x: 4, y: neu}
           ];
+    
+    const opposite_data = [
+            {x: 0, y: 100-op},
+            {x: 1, y: 100-con},
+            {x: 2, y: 100-ex},
+            {x: 3, y: 100-ag},
+            {x: 4, y: 100-neu}
+    ];
   
     return (
       <div>
@@ -127,8 +135,9 @@ class ScoreDetail extends Component {
         </div>
         <div className="column eight wide">
         <div>
-          <XYPlot height={200} width={200}>
+          <XYPlot height={200} width={200} stackBy="y">
             <VerticalBarSeries data={data} />
+            <VerticalBarSeries data={opposite_data} />
           </XYPlot>
         </div>
         </div>
@@ -139,9 +148,6 @@ class ScoreDetail extends Component {
 };
 
 const mapStateToProps = state => {
-  console.log('SongDetail map state to props');
-  console.log('displayScore = ' + state.displayScore);
-  console.log('answers = ' + state.answers);
   return { answers: state.answers, display : state.displayScore };
 };
 
