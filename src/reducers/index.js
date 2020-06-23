@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 
 const questionsReducer = () => {
-    console.log('Scores reducer called');
     return [
         { text: 'I am the life of the party', loc: 0 },
         { text: 'I don\'t talk a lot', loc: 1 },
@@ -57,11 +56,9 @@ const questionsReducer = () => {
 };
 
 const answersReducer = (answers = Array(50).fill(2), action) => {
-    console.log('Ocean Score reducer called');
     const newAnswers = answers.slice();
     if (action.type === 'CHANGE_SCORE') {
         newAnswers[action.payload.score.loc] = action.payload.val;
-        console.log(answers);
         return newAnswers;
     }
     
@@ -69,14 +66,9 @@ const answersReducer = (answers = Array(50).fill(2), action) => {
 };
 
 const scoreReducer = (displayScore=false, action) => {
-    console.log('score reducer called');
-    console.log('action.type = '+ action.type);
-    console.log('action.payload = '+ action.payload);
     if (action.type === 'DISPLAY_SCORE'){
-        console.log('action.type === DISPLAY_SCORE');
         return action.payload;
     }
-    console.log('action.type !== DISPLAY_SCORE');
     return displayScore;
 };
 

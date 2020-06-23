@@ -4,7 +4,6 @@ import { changeAnswer } from '../actions';
 
 class QuestionList extends Component {
   renderList() {
-    console.log('inside render List');
     return this.props.questions.map(question => {
       return (
         <div className="item" key={question.text}>
@@ -52,7 +51,6 @@ class QuestionList extends Component {
   }
 
   render() {
-    console.log('inside QuestionList function');
     return (
         <div>
             <div className="ui divided list">
@@ -64,7 +62,6 @@ class QuestionList extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log('SongList map state to props');
   return { questions: state.questions, answers: state.answers, display: state.displayScore };
 };
 
